@@ -1,0 +1,62 @@
+@media only screen and (max-width: 768px){
+
+
+body {
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #000;
+    width: 100%;
+    margin: 0;
+}
+#nav-bar {
+    float: left;
+    height: auto;
+    width: 100%;
+    border-right: 0px groove black;
+    text-align: center;
+}
+#container-body {
+    padding-left: 0;
+    width: 100%;
+}
+#welcome {
+    padding-left: 0;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+
+}
+#header {
+    padding-bottom: 0px;
+    text-align: center;
+}
+#logo-home {
+    width: 45%;
+}
+.track {
+    width: 170px;
+    height: 200px;
+    padding-top: 20px;
+    float: left;
+    text-decoration: none;
+    color: firebrick;
+    text-align: center;
+}
+.track_playing {
+    width: 500px;
+    height: 500px;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 100% !important;
+}
+form{
+	text-align:center;
+}
+input{
+	margin-left:33%;
+	width: 131px;
+}
+#btn-upload{
+        margin-left:43%;
+}
+

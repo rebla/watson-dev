@@ -1,0 +1,15 @@
+
+
+<%for (var t in tracks) {%>
+
+<a class="track" href='/tracks/<%=tracks[t].name%>'>
+
+	<%if (tracks[t].imgurl == null){ %>
+        <img src="/images/quaver3.png">
+        <%}else {%>
+        <img src="<%=tracks[t].imgurl%>">
+        <%}%>
+	<p><%=tracks[t].name%></p>
+</a>
+
+<%}%>

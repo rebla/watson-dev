@@ -1,0 +1,128 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #000;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+a:hover{
+  color: #6fd962;
+}
+
+h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+#header {
+	padding-bottom: 20px;
+}
+
+#nav-bar {
+	float: left;
+	height: 600px;
+	width: 200px;
+	border-right: 3px groove black;
+	text-align: center;
+}
+
+#nav-bar ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+#nav-bar li {
+	padding-bottom: 20px;
+	text-transformation: uppercase;
+}
+
+#container-body {
+	padding-left: 250px;
+	width: 900px;
+}
+
+#welcome {
+	padding-left: 50px;
+	text-align: center;
+}
+
+#welcome span {
+	margin-top: 20px;
+}
+
+.track {
+	width: 300px;
+	height: 200px;
+	padding-top: 50px;
+	float: left;
+	text-decoration: none;
+	color: firebrick;
+	text-align: center;
+}
+
+.track_playing {
+	width: 500px;
+	height: 500px;
+	padding-left: 200px;
+}
+
+.track_playing button {
+	margin-top: 50px;
+}
+
+.track p {
+	text-align: center;
+}
+
+.track img {
+	width: 120px;
+    height: auto;
+	border: 1px groove white;
+	padding: 0px;
+        background-color: #6fd962
+}
+.track img:hover {
+    
+    border: 1px groove white;
+    padding: 0px;
+    background-color: firebrick;
+}
+
+.track_playing img {
+	width: auto;
+	height: auto;
+	padding: 0px;
+}
+.track_playing img:hover {
+        width: auto;
+        height: auto;
+        padding: 0px;
+}
+
+
+.track audio {
+	width: 100%;
+}
+
+.upload_field {
+	display: block;
+	margin-top: 15px;
+}
+#logo-home {
+    width: 17%;
+}
+span{
+ 	color:#fff;
+}
+label{
+	color:#fff;
+}
+input{
+	color:#000;
+}
+#btn-upload{
+	color:#000;
+}

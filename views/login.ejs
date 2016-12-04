@@ -1,0 +1,18 @@
+
+<% if(message){ %>
+<h3 style ="color:firebrick"><%= message %></h3>
+<% } %>
+
+<form action="/login" method="post">
+    
+        <label>Username:</label>
+        <input type="text" name="username" class="login_text"/><br><br>
+        <label>Password:</label>
+        <input type="password" name="password" class="login_text"/><br><br>
+        <input type="submit" value="Login"/><br><br>
+        <a href="/users/" id="register">Register</a>
+    
+</form>
+
+
+

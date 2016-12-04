@@ -1,0 +1,12 @@
+
+
+<%for (var i in images) {%>
+
+<a class="track" href='/gallery/<%=i%>'>
+
+	 <img src="<%=images[i].url%>">
+     
+	<p><%=images[i].name%></p>
+</a>
+
+<%}%>
