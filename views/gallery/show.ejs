@@ -10,5 +10,8 @@
 	<%}else{%> 
 	<p>En esta foto he no podido encontar a nadie. ¡Vuelve a intentarlo!</p>
 	<%}%>
-
+	<%if (profiles != undefined){ %>
+	<p>También he localizado su 
+	<a href="http://twitter.com/<%=profiles%>" target="_blank">perfil de Twitter<i class="fa fa-twitter"></i></a>
+	<%}%>
 </div>
