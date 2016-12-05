@@ -1,8 +1,10 @@
 var fs = require('fs');
 var gallery_model = require('./../models/gallery.js');
 var watson = require('watson-developer-cloud');
-
+var wikipedia = require("wikipedia-js");
 var Twitter = require('twitter');
+var request = require("request");
+var TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
  
 var client = new Twitter({
   consumer_key: 'HCy6msZTwP9ObW9lWms8i1Md1',
@@ -11,6 +13,16 @@ var client = new Twitter({
   access_token_secret: 'y1ZLoWq43yoaP91E0Htg8NST2CVmwuPURXfGuaTDgWAZl'
 });
 
+var text_to_speech = new TextToSpeechV1({
+  username: '2e7e797f-e04c-4ff4-80d8-e4feb6fb3517',
+  password: 'ADRXf10MGVjb'
+});
+
+var params = {
+  text: 'Hello from IBM Watson',
+  voice: 'en-US_AllisonVoice', // Optional voice
+  accept: 'audio/wav'
+};
 
 exports.list = function (req, res) {
 	var images = gallery_model.photos;
@@ -53,6 +65,22 @@ exports.show = function (req, res) {
 		if (analysis.images[0].faces[0].identity != undefined) {
 			//Search for social profiles
 			var dname = analysis.images[0].faces[0].identity.name;
+			request("https://es.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles="+dname, function(error, response, body) {
+ 		 		var json = JSON.parse(body);
+ 		 		console.log(typeof json)
+ 		 		var pageid = Object.keys(json.query.pages)[0];
+ 		 		console.log(json.query.pages[pageid].extract)
+ 		 		var params = {
+				  text: json.query.pages[pageid].extract,
+				  voice: 'es-ES_LauraVoice', // Optional voice
+				  accept: 'audio/wav'
+				};
+
+				// Pipe the synthesized text to a file
+				text_to_speech.synthesize(params).pipe(fs.createWriteStream('public/'+dname+'.wav'));
+
+			});
+			
 			client.get('users/search', {q: dname, include_entities: false}, function(error, users, response) {
 		    //console.log(users);
 		    for (var i = 0; i<users.length; i++) {

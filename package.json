@@ -16,6 +16,8 @@
     "cf-deployment-tracker-client": "0.1.1",
     "morgan": "~1.6.1",
     "twitter": "*",
+    "node-wikipedia": "*",
+    "wikipedia-js": "*",
     "method-override": "^2.3.1",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.1",

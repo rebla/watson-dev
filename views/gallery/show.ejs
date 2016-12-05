@@ -13,5 +13,8 @@
 	<%if (profiles != undefined){ %>
 	<p>También he localizado su 
 	<a href="http://twitter.com/<%=profiles%>" target="_blank">perfil de Twitter<i class="fa fa-twitter"></i></a>
+	<p style="margin-bottom: 10%;">Si quieres saber más aqui tienes su <a href="http://es.wikipedia.com/wiki/<%=identity.name%>" target="_blank">pagina en Wikipedia<i class="fa fa-wikipedia-w"></i></a>
+	<p>Esta información esta disponible en audio también:</p>
+	<audio src="/<%=identity.name%>.wav" type="audio/mpeg" controls="controls"></audio>
 	<%}%>
 </div>
