@@ -14,8 +14,8 @@ var client = new Twitter({
 });
 
 var text_to_speech = new TextToSpeechV1({
-  username: '2e7e797f-e04c-4ff4-80d8-e4feb6fb3517',
-  password: 'ADRXf10MGVjb'
+  username: 'f1192638-5868-455c-9e64-7a4ccd54f3bf',
+  password: 'D1nKyfvV3oMw'
 });
 
 var params = {
@@ -43,7 +43,7 @@ exports.show = function (req, res) {
 	var twitterprofile = undefined
 	//console.log(image.url)
 	var visual_recognition = watson.visual_recognition({
-	  api_key: '73ab782e6b49d418a6e5706fa487b80e1cf2f21a',
+	  api_key: '44f6f8979899369132017d58e7ff42ae6c307a4c',
 	  version: 'v3',
 	  version_date: '2016-05-20'
 	});
